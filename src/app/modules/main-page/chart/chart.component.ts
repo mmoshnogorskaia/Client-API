@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherApiService } from '../../../services/weather-api.service'
 
 @Component({
   selector: 'app-chart',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private weatherService: WeatherApiService) { }
 
   ngOnInit() {
+    this.weatherService.getData().subscribe(res=>console.log(res));
   }
 
 }
