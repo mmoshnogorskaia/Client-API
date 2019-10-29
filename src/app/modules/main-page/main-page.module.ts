@@ -9,6 +9,6 @@ import { MainPageRoutingModule } from './main-page-routing.module';
   imports: [
     CommonModule,
     MainPageRoutingModule,
-  ]
+  ],
 })
 export class MainPageModule { }
